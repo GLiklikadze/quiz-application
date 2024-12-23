@@ -147,8 +147,9 @@ export interface QuestionProps {
   onSelectAnswer: (id: number) => void;
   onNextQuestion: (id: number | null) => void;
   isFinished: boolean;
-  timeRemaning: number;
+  timeRemaining: number; 
 }
+
 export const initialState = {
   questions: geographyQuiz.questions,
   currentQuestion: 0,
