@@ -17,7 +17,7 @@ type Variant = {
   name: string;
   isCorrect: boolean;
 };
-const geographyQuiz: Quiz = {
+export const geographyQuiz: Quiz = {
   id: 1,
   name: "Geography Quiz",
   questions: [
@@ -147,7 +147,7 @@ export interface QuestionProps {
   onSelectAnswer: (id: number) => void;
   onNextQuestion: (id: number | null) => void;
   isFinished: boolean;
-  timeRemaning: number;
+  timeRemaining: number;
 }
 export const initialState = {
   questions: geographyQuiz.questions,
@@ -159,7 +159,7 @@ export const initialState = {
 };
 export interface basicProps {
   isFinished: boolean;
-  timeRemaning: number;
+  timeRemaining: number;
 }
 export interface ResultProps {
   style?: React.CSSProperties;
@@ -167,7 +167,11 @@ export interface ResultProps {
   svg: React.ReactNode;
   score?: number;
   point?: number;
+  isFinished: boolean;
+  children?: React.ReactNode;
+  timeRemaining?: number;
 }
+
 export interface ProgressProps {
   currentQuestion: number;
 }
